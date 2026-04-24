@@ -11,20 +11,27 @@ body {
   color: #e2e8f0;
 }
 
+/* LAYOUT */
 .layout {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+/* SIDEBAR */
 .sidebar {
   width: 220px;
   background: #020617;
   padding: 30px 20px;
+  text-align: center;
 }
 
 .sidebar h2 {
   color: #a78bfa;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  margin-top: 20px;
 }
 
 .sidebar a {
@@ -42,31 +49,32 @@ body {
   color: white;
 }
 
+/* FOTO */
+.foto-perfil {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+  border: 2px solid #6366f1;
+}
+
+/* CONTENT */
 .content {
   flex: 1;
   padding: 40px;
-  overflow-y: auto;
 }
 
+/* SECTIONS */
 .section {
   display: none;
-  animation: fade 0.4s;
 }
 
 .section.active {
   display: block;
 }
 
-@keyframes fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.subtitle {
-  color: #94a3b8;
-  margin-bottom: 20px;
-}
-
+/* CARD */
 .card {
   background: rgba(255,255,255,0.03);
   padding: 20px;
@@ -74,16 +82,26 @@ body {
   margin-top: 20px;
 }
 
+/* GRID */
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* HOVER */
 .card.hover:hover {
   transform: translateY(-5px);
   border: 1px solid #6366f1;
 }
 
+/* IMAGEM */
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* SKILL */
 .skill {
   margin-bottom: 15px;
 }
@@ -101,6 +119,17 @@ body {
   background: linear-gradient(90deg, #6366f1, #38bdf8);
 }
 
+/* BOTÕES */
+.btn-projeto {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #6366f1;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 .whatsapp {
   display: inline-block;
   margin-top: 10px;
@@ -111,46 +140,40 @@ body {
   text-decoration: none;
 }
 
-
 .github {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 10px;
   background: #333;
   color: white;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.github:hover {
-  background: #555;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sidebar a {
+    margin: 5px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
 }
 
-
-.foto-perfil {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%; /* deixa redondo */
-  object-fit: cover;  /* corta a imagem certinho */
-  display: block;
-  margin: 0 auto 15px auto; /* centraliza */
-  border: 2px solid #6366f1; /* opcional */
-}
-
-.btn-projeto {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #6366f1;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* impede o card de parecer clicável inteiro */
-.card {
-  cursor: default;
-}
 
