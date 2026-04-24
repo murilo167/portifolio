@@ -1,104 +1,163 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Murilo Passos | Portfólio</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Murilo da Luz dos Passo</title>
   <link rel="stylesheet" href="stlye.css">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container nav">
-    <h1 class="logo">Murilo Passos</h1>
+<div class="layout">
+
+  <!-- MENU -->
+  <aside class="sidebar">
+   <img src="img/perfil.jpg" alt="foto de perfil" class="foto-perfil">
+    <h2>Murilo</h2>
+ 
+
     <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#skills">Conhecimentos</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
+      <a class="active" onclick="showSection('home', this)">Início</a>
+      <a onclick="showSection('skills', this)">Competências</a>
+      <a onclick="showSection('projetos', this)">Projetos</a>
+      <a onclick="showSection('contato', this)">Contato</a>
     </nav>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <h1>Sobre Mim</h1> <div> <p><strong>Nome:</strong> Murilo da Luz dos Passo</p> <p><strong>Idade:</strong> 16 anos</p> <p><strong>Curso:</strong> Estudante de TI <hr> <p> Sou estudante de programação com foco em desenvolvimento Java, banco de dados e desenvolvimento web. Atualmente estou no início da minha jornada na área de tecnologia, desenvolvendo projetos práticos para aprimorar minhas habilidades. </p> <p> Tenho interesse em aprender constantemente e evoluir minhas competências técnicas, buscando sempre melhorar minha lógica de programação e conhecimentos em sistemas. </p> <p> <strong>Objetivo Profissional:</strong><br> Busco minha primeira oportunidade como desenvolvedor, com o objetivo de adquirir experiência, aprender com profissionais da área e crescer na área de tecnologia. </p> </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h1>Competências Técnicas</h1>
+
+      <div class="skill">
+        <span>Java - Básico</span>
+        <div class="bar"><div style="width: 40%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>MySQL - Básico</span>
+        <div class="bar"><div style="width: 35%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>HTML - Intermediário</span>
+        <div class="bar"><div style="width: 60%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>CSS - Intermediário</span>
+        <div class="bar"><div style="width: 55%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Lógica de Programação - Básico</span>
+        <div class="bar"><div style="width: 45%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>Inglês - Iniciante</span>
+        <div class="bar"><div style="width: 20%"></div></div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
+      <h1>Projetos</h1>
+
+      <div class="grid">
+
+        <div class="card hover">
+          <img src="img/image copy 2.png"alt="curriculo">
+          <h3>curriculo
+          <p>
+            site pessoal
+          </p>
+          <a href="https://murilo167.github.io/PortfolioPessoal/" target="_blank">ver repositorio </a>
+        </div>
+        
+
+        <div class="card hover">
+         <img src="img/image.png" alt="Eureka-main">
+
+          <h3>Eureka</h3>
+          <p> um site feito para crianças aprenderem a mexer no computador</p>
+
+      <a class="btn-projeto" href="https://kauaxz89.github.io/Eureka-main/" target="_blank">
+          Ver repositório
+         </a>
+
+
+        </div>
+
+        <div class="card hover">
+          <img src="img/image copy.png" alt="machmaking">
+          <h3>Site machmaking</h3>
+          <p>
+            Projeto de pesquis ao sisteema de machmaking de jogos competitivos.
+          </p>
+          <a href="https://ricardo20080.github.io/site_machmaking/"target="_blank">ver repositorio<a>
+
+          </a>
+        </div>
+      
+      
+    </section>
+
+    
+<!-- CONTATO -->
+<section id="contato" class="section">
+  <h1>Contato</h1>
+
+  <div class="card">
+    <p>
+      Disponível para oportunidades de aprendizado,
+      estágio e desenvolvimento profissional.
+    </p>
+
+    <p><strong>Email:</strong> murilopasso95@gmail.com</p>
+
+    <a class="whatsapp" href="https://wa.me/5551989924439" target="_blank">
+      Falar no WhatsApp
+    </a>
+
+    <br><br>
+
+    <a class="github" href="https://github.com/murilo167" target="_blank">
+      Ver meu GitHub
+    </a>
+
   </div>
-
-  <div class="hero container">
-    <h2><span>Desenvolvedor em evolução</span></h2>
-    <p>Tenho 16 anos e estou construindo minha jornada no desenvolvimento web com foco em design moderno e código bem estruturado.</p>
-
-    <div class="hero-buttons">
-      <a href="https://github.com/murilo167" target="_blank" class="btn primary">GitHub</a>
-      <a href="#contato" class="btn secondary">Contato</a>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<section id="sobre" class="container section">
-  <h2>Sobre mim</h2>
-  <p>
-    Meu nome é Murilo Passos, tenho 16 anos e estou estudando programação web.
-    Busco evoluir constantemente e desenvolver projetos com qualidade profissional.
-  </p>
 </section>
 
-<section id="skills" class="container section">
-  <h2>Conhecimentos</h2>
 
-  <div class="grid">
-    <div class="card">HTML</div>
-    <div class="card">CSS</div>
-    <div class="card">Git / GitHub</div>
-    <div class="card">VS Code</div>
-    <div class="card">Lógica de Programação</div>
-  </div>
-</section>
 
-<section id="projetos" class="container section">
-  <h2>Projetos</h2>
+</div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Site Pessoal</h3>
-      <p>Projeto com foco em design moderno e organização.</p>
-      <span class="status dev">Em desenvolvimento</span>
-    </div>
+<script>
+function showSection(id, element) {
 
-    <div class="card">
-      <h3>Calculadora</h3>
-      <p>Aplicação simples para treinar lógica.</p>
-      <span class="status done">Finalizado</span>
-    </div>
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.remove('active');
+  });
 
-    <div class="card">
-      <h3>Landing Page</h3>
-      <p>Projeto com layout responsivo e visual moderno.</p>
-      <span class="status progress">Em andamento</span>
-    </div>
-  </div>
-</section>
+  document.getElementById(id).classList.add('active');
 
-<section id="contato" class="container section">
-  <h2>Contato</h2>
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.classList.remove('active');
+  });
 
-  <div class="contact">
-    <p><strong>GitHub:</strong> github.com/murilo167</p>
-    <p><strong>Email:</strong> seuemail@email.com</p>
-
-    <form>
-      <input type="text" placeholder="Seu nome">
-      <input type="email" placeholder="Seu email">
-      <textarea placeholder="Mensagem"></textarea>
-      <button>Enviar</button>
-    </form>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p>Murilo Passos • Programação Web • 2026</p>
-</footer>
+  element.classList.add('active');
+}
+</script>
 
 </body>
 </html>
+

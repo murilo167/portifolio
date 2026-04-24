@@ -1,185 +1,156 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background: #0a0f1c;
   color: #e2e8f0;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* HEADER */
-.header {
-  background: radial-gradient(circle at top, #1e1b4b, #020617);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-/* NAV */
-.nav {
+.layout {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 100vh;
 }
 
-nav a {
-  color: #94a3b8;
-  margin-left: 20px;
-  text-decoration: none;
-  transition: 0.3s;
+.sidebar {
+  width: 220px;
+  background: #020617;
+  padding: 30px 20px;
 }
 
-nav a:hover {
-  color: #fff;
-}
-
-/* LOGO */
-.logo {
+.sidebar h2 {
   color: #a78bfa;
-  font-weight: 600;
+  margin-bottom: 30px;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero h2 span {
-  background: linear-gradient(90deg, #a78bfa, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 2.8em;
-}
-
-.hero p {
-  margin: 20px 0;
+.sidebar a {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
   color: #94a3b8;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-/* BOTÕES */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.btn {
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.primary {
+.sidebar a.active,
+.sidebar a:hover {
   background: #6366f1;
   color: white;
 }
 
-.primary:hover {
-  box-shadow: 0 0 20px rgba(99,102,241,0.6);
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
 }
 
-.secondary {
-  border: 1px solid #6366f1;
-  color: #c7d2fe;
-}
-
-.secondary:hover {
-  background: #6366f1;
-  color: white;
-}
-
-/* SEÇÕES */
 .section {
-  margin-top: 50px;
+  display: none;
+  animation: fade 0.4s;
 }
 
-h2 {
+.section.active {
+  display: block;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.subtitle {
+  color: #94a3b8;
   margin-bottom: 20px;
-  font-size: 2em;
 }
 
-/* GRID */
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
   gap: 20px;
 }
 
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 12px;
+.card.hover:hover {
+  transform: translateY(-5px);
+  border: 1px solid #6366f1;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #22c55e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+.github {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(167,139,250,0.4);
+.github:hover {
+  background: #555;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
-/* STATUS */
-.status {
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* deixa redondo */
+  object-fit: cover;  /* corta a imagem certinho */
+  display: block;
+  margin: 0 auto 15px auto; /* centraliza */
+  border: 2px solid #6366f1; /* opcional */
+}
+
+.btn-projeto {
   display: inline-block;
   margin-top: 10px;
-  font-size: 0.8em;
-}
-
-.dev { color: #fbbf24; }
-.done { color: #22c55e; }
-.progress { color: #38bdf8; }
-
-/* CONTATO */
-.contact {
-  background: rgba(255,255,255,0.03);
-  padding: 20px;
-  border-radius: 12px;
-}
-
-form {
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: #020617;
-  color: white;
-}
-
-button {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
+  padding: 8px 12px;
   background: #6366f1;
   color: white;
+  border-radius: 6px;
+  text-decoration: none;
   cursor: pointer;
 }
 
-button:hover {
-  box-shadow: 0 0 15px rgba(99,102,241,0.6);
+/* impede o card de parecer clicável inteiro */
+.card {
+  cursor: default;
 }
 
-/* FOOTER */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  color: #64748b;
-}
